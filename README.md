@@ -20,8 +20,8 @@ Patch the Services FB OAuth module with this patch:
 
  - https://www.drupal.org/node/2376345#comment-9871053
 
-On your Drupal site, go to admin/structure/services/list/drupalgap/resources and
-check the box next to "connect" in the "fboauth" section.
+On your Drupal site, go to `admin/structure/services/list/drupalgap/resources`
+and check the box next to "connect" in the "fboauth" section.
 
 Next, create an app here:
 
@@ -55,14 +55,11 @@ Turn on this module in your settings.js file:
 Drupal.modules.contrib['facebook'] = {};
 ```
 
-Include your Facebook app ID(s) and scope(s) in your settings.js file:
+Include your Facebook app ID and scope(s) in your settings.js file:
 
 ```
 drupalgap.settings.facebook = {
-  app_id: {
-    Android: '123456789',
-    iOS: '987654321'
-  },
+  app_id: '123456789',
   scope: 'email'
 };
 ```
