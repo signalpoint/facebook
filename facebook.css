@@ -1,0 +1,22 @@
+#edit-user-login-form-facebook,
+#edit-user-register-form-facebook{
+  background-color: #4e69a2;
+  border-color: #435a8b #3c5488 #334c83;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+#edit-user-login-form-facebook:after,
+#edit-user-register-form-facebook:after {
+  background-image: url("FB-f-Logo__white_29.png");
+  background-position: 0% 0%;
+  width: 29px;
+  height: 29px;
+  background-color: transparent !important;
+  box-shadow: none;
+  border-radius: 0em;
+  -moz-border-radius: 0px;
+  -webkit-border-radius:0px;
+  margin-top: -14px;
+}
+

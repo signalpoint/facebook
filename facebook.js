@@ -3,12 +3,11 @@
  */
 function facebook_install() {
   try {
-    if (drupalgap.settings.mode == 'phonegap') {
-      openFB.init({
-        appId: drupalgap.settings.facebook.app_id[device.platform],
-        tokenStore: window.localStorage
-      });
-    }
+    drupalgap_add_css(drupalgap_get_path('module', 'facebook') + '/facebook.css');
+    openFB.init({
+      appId: drupalgap.settings.facebook.app_id,
+      tokenStore: window.localStorage
+    });
   }
   catch (error) { console.log('facebook_install - ' + error); }
 }
@@ -50,11 +49,13 @@ function facebook_services_request_pre_postprocess_alter(options, result) {
  */
 function facebook_form_alter(form, form_state, form_id) {
   try {
-    if (form_id == 'user_login_form') {
+    if (form_id == 'user_login_form' || form_id == 'user_register_form') {
       form.buttons['facebook'] = {
-        title: 'Login with Facebook',
+        title: 'Continue with Facebook',
         attributes: {
-          onclick: "facebook_onclick()"
+          'class': '.ui-nodisc-icon',
+          onclick: "facebook_onclick()",
+          'data-icon': 'info' // we place any icon here, then overwrite it with css
         }
       };
     }
