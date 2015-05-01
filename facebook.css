@@ -8,7 +8,9 @@
 }
 #edit-user-login-form-facebook:after,
 #edit-user-register-form-facebook:after {
-  background-image: url("FB-f-Logo__white_29.png");
+  background-image: url("FB-f-Logo__white_144.png") /* get image from https://www.facebookbrand.com/ */;
+  background-size: 29px 29px;
+  background-repeat: no-repeat;
   background-position: 0% 0%;
   width: 29px;
   height: 29px;
