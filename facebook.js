@@ -40,8 +40,11 @@ function facebook_services_request_pre_postprocess_alter(options, result) {
     if (options.service == 'fboauth' && options.resource == 'connect') { 
       Drupal.sessid = result.token;
     }
+    else if (options.service == 'user' && options.resource == 'logout') {
+      openFB.logout();
+    }
   }
-  catch (error) { console.log('facebook_services_postprocess - ' + error); }
+  catch (error) { console.log('facebook_services_request_pre_postprocess_alter - ' + error); }
 }
 
 /**
