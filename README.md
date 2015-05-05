@@ -28,7 +28,7 @@ Next, create an app here:
  - https://developers.facebook.com/apps
 
 Under "Advanced" settings in your app on Facebook, set the "Valid OAuth redirect
-URIs" to for use in a mobile application:
+URIs" to:
 
  - https://www.facebook.com/connect/login_success.html
  
@@ -36,11 +36,11 @@ Download the openfb.js file from this project:
 
  - https://github.com/ccoenraets/OpenFB
 
-Place it in your app's www directory, then patch the file with this one line
-code change:
+Place it in your app's www directory, then patch the file with these patches:
 
  - https://github.com/ccoenraets/OpenFB/pull/49/files#diff-608308a045a8e30e23df61c1a95d0e6fR117
- 
+ - https://github.com/vielhuber/OpenFB/commit/6cff3852e4a04b377eb4f654265a2ba1431bd316?diff=split
+
 Then include the openfb.js file in your index.html body before the
 drupalgap_onload() call:
 
