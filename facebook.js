@@ -76,7 +76,7 @@ function facebook_onclick() {
         if (response.status === 'connected') {
           facebook_connected(response.authResponse.token);
         }
-        else { drupalgap_alert(response.error); }
+        else if (response.error) { drupalgap_alert(response.error); }
       },
       { scope: drupalgap.settings.facebook.scope }
     );
