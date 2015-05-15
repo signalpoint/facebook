@@ -16,9 +16,10 @@ Install these modules on your Drupal site:
  - https://www.drupal.org/project/fboauth
  - https://www.drupal.org/project/services_fboauth
 
-Patch the Services FB OAuth module with this patch:
+Patch the Services FB OAuth module with these patches:
 
  - https://www.drupal.org/node/2376345#comment-9871053
+ - https://www.drupal.org/node/2489598#comment-9928396
 
 On your Drupal site, go to `admin/structure/services/list/drupalgap/resources`
 and check the box next to "connect" in the "fboauth" section.
