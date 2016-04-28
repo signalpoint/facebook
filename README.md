@@ -13,8 +13,13 @@ cordova plugin add org.apache.cordova.inappbrowser
 
 Install these modules on your Drupal site:
 
- - https://www.drupal.org/project/fboauth
+ - https://www.drupal.org/project/fboauth (*use the development version*)
  - https://www.drupal.org/project/services_fboauth
+ - 
+
+Patch the FB OAuth module with this patch:
+
+- https://www.drupal.org/node/2612868#comment-11136303
 
 Patch the Services FB OAuth module with these patches:
 
