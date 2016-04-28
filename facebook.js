@@ -24,7 +24,7 @@ function facebook_deviceready() {
         }
         // Authenticated.
         else if (loginStatus.status == 'connected') {
-          facebook_connected(loginStatus.authResponse.token);
+          facebook_connected(loginStatus.authResponse.accessToken);
         }
     });
     return false;
@@ -74,7 +74,7 @@ function facebook_onclick() {
     openFB.login(
       function(response) {
         if (response.status === 'connected') {
-          facebook_connected(response.authResponse.token);
+          facebook_connected(response.authResponse.accessToken);
         }
         else if (response.error) { drupalgap_alert(response.error); }
       },
